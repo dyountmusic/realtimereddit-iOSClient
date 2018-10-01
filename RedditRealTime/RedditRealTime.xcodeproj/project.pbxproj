@@ -14,6 +14,7 @@
 		EA549DD121597ABE00DFC066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA549DCF21597ABE00DFC066 /* LaunchScreen.storyboard */; };
 		EA549DDC21597ABE00DFC066 /* RedditRealTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DDB21597ABE00DFC066 /* RedditRealTimeTests.swift */; };
 		EA549DE721597ABE00DFC066 /* RedditRealTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */; };
+		EA65534E2162B6C00096243D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65534D2162B6C00096243D /* ActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EA549DE221597ABE00DFC066 /* RedditRealTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditRealTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditRealTimeUITests.swift; sourceTree = "<group>"; };
 		EA549DE821597ABE00DFC066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA65534D2162B6C00096243D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				EA549DC621597ABC00DFC066 /* AppDelegate.swift */,
 				EA549DC821597ABC00DFC066 /* ViewController.swift */,
+				EA65534F2162B6C60096243D /* UI Elements */,
 				EA549DCA21597ABC00DFC066 /* Main.storyboard */,
 				EA549DCD21597ABE00DFC066 /* Assets.xcassets */,
 				EA549DCF21597ABE00DFC066 /* LaunchScreen.storyboard */,
@@ -123,6 +126,14 @@
 				EA549DE821597ABE00DFC066 /* Info.plist */,
 			);
 			path = RedditRealTimeUITests;
+			sourceTree = "<group>";
+		};
+		EA65534F2162B6C60096243D /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				EA65534D2162B6C00096243D /* ActionButton.swift */,
+			);
+			path = "UI Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				EA549DC921597ABC00DFC066 /* ViewController.swift in Sources */,
 				EA549DC721597ABC00DFC066 /* AppDelegate.swift in Sources */,
+				EA65534E2162B6C00096243D /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
