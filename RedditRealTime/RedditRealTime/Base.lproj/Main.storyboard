@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,25 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Li-ZI-WzD" customClass="ActionButton" customModule="RedditRealTime" customModuleProvider="target">
-                                <rect key="frame" x="70" y="418" width="275" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.27058823529411763" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="3Sr-Uz-HtO"/>
-                                    <constraint firstAttribute="height" constant="60" id="drx-MU-0cC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Fetch Reddit Data"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="1Li-ZI-WzD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="330" id="1cZ-x8-taL"/>
-                            <constraint firstItem="1Li-ZI-WzD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="HGE-XC-TRI"/>
-                            <constraint firstItem="1Li-ZI-WzD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="maY-i7-QHV"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Rising Stories 🔥" id="uEq-Nr-PYS">
@@ -47,7 +30,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="132.68365817091455"/>
+            <point key="canvasLocation" x="797.10144927536237" y="132.58928571428572"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wl5-XE-jPh">
@@ -56,13 +39,40 @@
                     <view key="view" contentMode="scaleToFill" id="fz6-iV-QJ9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="ActionButton" customModule="RedditRealTime" customModuleProvider="target">
+                                <rect key="frame" x="47" y="423" width="320" height="50"/>
+                                <color key="backgroundColor" name="BrandColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Log into Reddit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundButtonColor">
+                                        <color key="value" name="BrandColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightButtonColor">
+                                        <color key="value" name="BrandColorHighlighted"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="centerY" secondItem="fz6-iV-QJ9" secondAttribute="centerY" id="4EH-Gz-tZk"/>
+                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="leading" secondItem="n27-H7-YDa" secondAttribute="leading" constant="47" id="Cok-v9-RaO"/>
+                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="centerX" secondItem="fz6-iV-QJ9" secondAttribute="centerX" id="ccg-4e-c9e"/>
+                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="top" secondItem="n27-H7-YDa" secondAttribute="top" constant="335" id="zfN-RK-Xl8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="n27-H7-YDa"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvC-dp-2cF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1936.2318840579712" y="132.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fD4-JQ-ene">
@@ -83,4 +93,12 @@
             <point key="canvasLocation" x="-15" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="BrandColor">
+            <color red="0.96470588235294119" green="0.35294117647058826" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BrandColorHighlighted">
+            <color red="0.98431372549019602" green="0.68235294117647061" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

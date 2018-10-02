@@ -13,12 +13,27 @@ import UIKit
     
     // MARK: IBInspectable Variables
     
-    @IBInspectable var cornerRadius: CGFloat = 15 {
+    @IBInspectable var cornerRadius: CGFloat = 10 {
         didSet {
             refreshCorners(value: cornerRadius)
         }
     }
     
+    @IBInspectable var backgroundButtonColor: UIColor = UIColor.init(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1) {
+        didSet {
+            guard let color = UIColor(named: "BrandColor") else { return }
+            refreshColor(color: color)
+        }
+    }
+    
+    @IBInspectable var highlightButtonColor: UIColor = UIColor.init(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1) {
+        didSet {
+            guard let color = UIColor(named: "BrandColorHighlighted") else { return }
+            refreshHighlightColor(color: color)
+        }
+    }
+    
+    // MARK: Variables
     
     // MARK: Init Methods
     override init(frame: CGRect) {
@@ -46,5 +61,24 @@ import UIKit
         layer.cornerRadius = value
     }
     
+    func refreshColor(color: UIColor) {
+        let image = createImage(color: color)
+        setBackgroundImage(image, for: UIControl.State.normal)
+        clipsToBounds = true
+    }
+    
+    func refreshHighlightColor(color: UIColor) {
+        let image = createImage(color: color)
+        setBackgroundImage(image, for: UIControl.State.highlighted)
+        clipsToBounds = true
+    }
+    
+    func createImage(color: UIColor) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), true, 0.0)
+        color.setFill()
+        UIRectFill(CGRect(x: 0, y: 0, width: 1, height: 1))
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        return image
+    }
     
 }
