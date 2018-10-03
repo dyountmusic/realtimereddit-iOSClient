@@ -13,19 +13,20 @@
         <!--Rising Stories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Rising Stories" id="BYZ-38-t0r" customClass="ViewController" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="348-gf-wcg">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="348-gf-wcg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CBb-ch-mzK"/>
+                            <constraint firstItem="348-gf-wcg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-88" id="CBb-ch-mzK"/>
                             <constraint firstAttribute="bottom" secondItem="348-gf-wcg" secondAttribute="bottom" id="Dju-bh-er3"/>
                             <constraint firstAttribute="trailing" secondItem="348-gf-wcg" secondAttribute="trailing" id="ggZ-2k-YBE"/>
                             <constraint firstItem="348-gf-wcg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jLI-NW-aeC"/>
@@ -52,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="ActionButton" customModule="RedditRealTime" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="ActionButton" customModule="RedditRealTime" customModuleProvider="target">
                                 <rect key="frame" x="47" y="423" width="320" height="50"/>
                                 <color key="backgroundColor" name="BrandColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -64,10 +65,10 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundButtonColor">
-                                        <color key="value" name="BrandColor"/>
+                                        <color key="value" name="RedditBrandColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightButtonColor">
-                                        <color key="value" name="BrandColorHighlighted"/>
+                                        <color key="value" name="RedditBrandColorHighlighted"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -147,8 +148,11 @@
         <namedColor name="BrandColor">
             <color red="0.96470588235294119" green="0.35294117647058826" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="BrandColorHighlighted">
-            <color red="0.98431372549019602" green="0.68235294117647061" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="RedditBrandColor">
+            <color red="0.96470588235294119" green="0.35294117647058826" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="RedditBrandColorHighlighted">
+            <color red="1" green="0.83921568627450982" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

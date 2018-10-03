@@ -21,14 +21,14 @@ import UIKit
     
     @IBInspectable var backgroundButtonColor: UIColor = UIColor.init(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1) {
         didSet {
-            guard let color = UIColor(named: "BrandColor") else { return }
+            guard let color = UIColor(named: "RedditBrandColor") else { return }
             refreshColor(color: color)
         }
     }
     
     @IBInspectable var highlightButtonColor: UIColor = UIColor.init(red: 0, green: 122/255.0, blue: 255/255.0, alpha: 1) {
         didSet {
-            guard let color = UIColor(named: "BrandColorHighlighted") else { return }
+            guard let color = UIColor(named: "RedditBrandColorHighlighted") else { return }
             refreshHighlightColor(color: color)
         }
     }
@@ -53,6 +53,8 @@ import UIKit
     func sharedInit() {
         // Common logic goes here
         refreshCorners(value: cornerRadius)
+        guard let color = UIColor(named: "RedditBrandColor") else { return }
+        refreshColor(color: color)
     }
     
     // MARK: Internal Methods
