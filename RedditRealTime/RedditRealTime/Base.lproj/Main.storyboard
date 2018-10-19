@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWX-at-b9O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWX-at-b9O">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,9 +53,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="ActionButton" customModule="RedditRealTime" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="ActionButton" customModule="RedditRealTime" customModuleProvider="target">
                                 <rect key="frame" x="47" y="423" width="320" height="50"/>
-                                <color key="backgroundColor" name="BrandColor"/>
+                                <color key="backgroundColor" name="RedditBrandColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ada-D6-g8e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Log into Reddit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,26 +75,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-XR-3KV">
-                                <rect key="frame" x="20" y="124" width="374.33333333333331" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-XR-3KV">
+                                <rect key="frame" x="20" y="124" width="374" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="qi2-dK-Gm4">
-                                        <rect key="frame" x="0.0" y="0.0" width="374.33333333333331" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Time Data Refresh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6u-GZ-dT2">
-                                                <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2zq-v3-bPh">
-                                                <rect key="frame" x="325.33333333333331" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7h7-G6-rff">
-                                        <rect key="frame" x="0.0" y="51" width="374.33333333333331" height="30"/>
+                                        <rect key="frame" x="0.0" y="51" width="374" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Pulling From: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkd-Eb-39c">
                                                 <rect key="frame" x="0.0" y="0.0" width="179" height="30"/>
@@ -100,7 +102,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Politics" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ryy-YF-b8m">
-                                                <rect key="frame" x="189" y="0.0" width="185.33333333333337" height="30"/>
+                                                <rect key="frame" x="189" y="0.0" width="185" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -113,10 +115,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="centerY" secondItem="fz6-iV-QJ9" secondAttribute="centerY" id="4EH-Gz-tZk"/>
-                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="leading" secondItem="n27-H7-YDa" secondAttribute="leading" constant="47" id="Cok-v9-RaO"/>
-                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="centerX" secondItem="fz6-iV-QJ9" secondAttribute="centerX" id="ccg-4e-c9e"/>
-                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="top" secondItem="n27-H7-YDa" secondAttribute="top" constant="335" id="zfN-RK-Xl8"/>
+                            <constraint firstItem="TTZ-XR-3KV" firstAttribute="leading" secondItem="n27-H7-YDa" secondAttribute="leading" constant="20" id="Aun-O2-siU"/>
+                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="leading" secondItem="n27-H7-YDa" secondAttribute="leading" constant="47" id="NhU-Pg-WNA"/>
+                            <constraint firstItem="TTZ-XR-3KV" firstAttribute="top" secondItem="n27-H7-YDa" secondAttribute="top" constant="36" id="SU4-ad-zVD"/>
+                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="centerY" secondItem="fz6-iV-QJ9" secondAttribute="centerY" id="hLv-yn-631"/>
+                            <constraint firstItem="n27-H7-YDa" firstAttribute="trailing" secondItem="TTZ-XR-3KV" secondAttribute="trailing" constant="20" id="mSu-cR-gso"/>
+                            <constraint firstItem="n27-H7-YDa" firstAttribute="trailing" secondItem="MeL-Zh-p9b" secondAttribute="trailing" constant="47" id="oKq-W6-f1h"/>
+                            <constraint firstItem="MeL-Zh-p9b" firstAttribute="centerX" secondItem="TTZ-XR-3KV" secondAttribute="centerX" id="qvi-Uu-gDS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n27-H7-YDa"/>
                     </view>
@@ -145,9 +150,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="BrandColor">
-            <color red="0.96470588235294119" green="0.35294117647058826" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="RedditBrandColor">
             <color red="0.96470588235294119" green="0.35294117647058826" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
