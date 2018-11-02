@@ -25,7 +25,7 @@ class RedditPostDownloadService {
         //save the current state before it is overwritten
         previousState = computeState()
         
-        let jsonURLString = "https://www.reddit.com/r/politics.json"
+        let jsonURLString = "https://www.reddit.com/r/politics/rising.json?sort=new"
         guard let url = URL(string: jsonURLString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
