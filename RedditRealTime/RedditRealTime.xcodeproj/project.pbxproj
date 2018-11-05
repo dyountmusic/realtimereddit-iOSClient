@@ -82,6 +82,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA4791F92190D12E001413A4 /* Model Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EA4E224F2187A37D00269F54 /* RedditPost.swift */,
+			);
+			path = "Model Layer";
+			sourceTree = "<group>";
+		};
+		EA4791FA2190D136001413A4 /* View Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EA4791FD2190D16F001413A4 /* Table View Cells */,
+				EA4791FB2190D15A001413A4 /* View Controllers */,
+				EA65534F2162B6C60096243D /* Custom UI */,
+			);
+			path = "View Layer";
+			sourceTree = "<group>";
+		};
+		EA4791FB2190D15A001413A4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA549DC821597ABC00DFC066 /* RisingStoriesViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EA4791FD2190D16F001413A4 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EA4E22512187A7D200269F54 /* PostTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		EA4791FE2190D188001413A4 /* Controller Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EA4791FF2190D196001413A4 /* Services */,
+			);
+			path = "Controller Layer";
+			sourceTree = "<group>";
+		};
+		EA4791FF2190D196001413A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA4E224D2187A0EE00269F54 /* RedditPostDownloadService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EA549DBA21597ABC00DFC066 = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				EA549DC621597ABC00DFC066 /* AppDelegate.swift */,
-				EA549DC821597ABC00DFC066 /* RisingStoriesViewController.swift */,
-				EA4E224D2187A0EE00269F54 /* RedditPostDownloadService.swift */,
-				EA4E224F2187A37D00269F54 /* RedditPost.swift */,
-				EA4E22512187A7D200269F54 /* PostTableViewCell.swift */,
-				EA65534F2162B6C60096243D /* UI Elements */,
+				EA4791FA2190D136001413A4 /* View Layer */,
+				EA4791F92190D12E001413A4 /* Model Layer */,
+				EA4791FE2190D188001413A4 /* Controller Layer */,
 				EA549DCA21597ABC00DFC066 /* Main.storyboard */,
 				EA549DCD21597ABE00DFC066 /* Assets.xcassets */,
 				EA549DCF21597ABE00DFC066 /* LaunchScreen.storyboard */,
@@ -137,12 +185,12 @@
 			path = RedditRealTimeUITests;
 			sourceTree = "<group>";
 		};
-		EA65534F2162B6C60096243D /* UI Elements */ = {
+		EA65534F2162B6C60096243D /* Custom UI */ = {
 			isa = PBXGroup;
 			children = (
 				EA65534D2162B6C00096243D /* ActionButton.swift */,
 			);
-			path = "UI Elements";
+			path = "Custom UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
