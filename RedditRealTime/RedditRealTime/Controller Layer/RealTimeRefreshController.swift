@@ -10,17 +10,21 @@ import Foundation
 
 class RealTimeRefreshController {
     
-    var isRealTime = false
+    var realTimeEnabled: Bool {
+        get { return UserDefaults.standard.bool(forKey: "RealTimeEnabled") }
+        set { UserDefaults.standard.set(newValue, forKey: "RealTimeEnabled") }
+    }
+    
     weak var timer: Timer?
     var timerDispatchSourceTimer : DispatchSourceTimer?
     
     func startTimer(viewController: RisingStoriesViewController) {
         
-        if isRealTime { return }
+        if realTimeEnabled { return }
         
         if #available(iOS 10.0, *) {
             timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
-                self?.isRealTime = true
+                self?.realTimeEnabled = true
                 viewController.updateUI()
             }
             
@@ -33,12 +37,12 @@ class RealTimeRefreshController {
             }
             timerDispatchSourceTimer?.resume()
         }
-        isRealTime = true
+        realTimeEnabled = true
     }
     
     func stopTimer() {
         
-        isRealTime = false
+        realTimeEnabled = false
         
         timer?.invalidate()
         timerDispatchSourceTimer?.cancel()
