@@ -17,6 +17,14 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupTableView()
+        
+        updateUI()
+        
+    }
+    
+    func setupTableView() {
         
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -24,19 +32,16 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
             tableView.addSubview(refreshControl)
         }
         
-//        redditPostFetcher.downloadPosts {
-//            self.redditPostFetcher.sortPosts()
-//
-//            DispatchQueue.main.async {
-//                self.tableView.dataSource = self
-//                self.tableView.reloadData()
-//            }
-//        }
+        refreshControl.layer.zPosition = -1
+        refreshControl.addTarget(self, action: #selector(refreshPosts(_:)), for: .valueChanged)
+        refreshControl.tintColor = #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)
+        let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)]
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Reddit Posts...", attributes: attributes)
+        tableView.dataSource = self
         
     }
     
     @objc private func refreshPosts(_ sender: Any) {
-        // Fetch Weather Data
         updateUI()
     }
     
@@ -44,8 +49,12 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         
         redditPostFetcher.downloadPosts {
             
+            self.redditPostFetcher.sortPosts()
+            
             DispatchQueue.main.async {
+                self.refreshControl.beginRefreshing()
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
             
         }
