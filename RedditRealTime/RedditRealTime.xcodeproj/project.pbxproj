@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA4E224E2187A0EE00269F54 /* RedditPostDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E224D2187A0EE00269F54 /* RedditPostDownloadService.swift */; };
+		EA4E22502187A37D00269F54 /* RedditPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E224F2187A37D00269F54 /* RedditPost.swift */; };
+		EA4E22522187A7D200269F54 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4E22512187A7D200269F54 /* PostTableViewCell.swift */; };
 		EA549DC721597ABC00DFC066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DC621597ABC00DFC066 /* AppDelegate.swift */; };
-		EA549DC921597ABC00DFC066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DC821597ABC00DFC066 /* ViewController.swift */; };
+		EA549DC921597ABC00DFC066 /* RisingStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DC821597ABC00DFC066 /* RisingStoriesViewController.swift */; };
 		EA549DCC21597ABC00DFC066 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA549DCA21597ABC00DFC066 /* Main.storyboard */; };
 		EA549DCE21597ABE00DFC066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA549DCD21597ABE00DFC066 /* Assets.xcassets */; };
 		EA549DD121597ABE00DFC066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA549DCF21597ABE00DFC066 /* LaunchScreen.storyboard */; };
 		EA549DDC21597ABE00DFC066 /* RedditRealTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DDB21597ABE00DFC066 /* RedditRealTimeTests.swift */; };
 		EA549DE721597ABE00DFC066 /* RedditRealTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */; };
+		EA65534E2162B6C00096243D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65534D2162B6C00096243D /* ActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA4E224D2187A0EE00269F54 /* RedditPostDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditPostDownloadService.swift; sourceTree = "<group>"; };
+		EA4E224F2187A37D00269F54 /* RedditPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditPost.swift; sourceTree = "<group>"; };
+		EA4E22512187A7D200269F54 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		EA549DC321597ABC00DFC066 /* RedditRealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditRealTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA549DC621597ABC00DFC066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA549DC821597ABC00DFC066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA549DC821597ABC00DFC066 /* RisingStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RisingStoriesViewController.swift; sourceTree = "<group>"; };
 		EA549DCB21597ABC00DFC066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA549DCD21597ABE00DFC066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA549DD021597ABE00DFC066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,7 @@
 		EA549DE221597ABE00DFC066 /* RedditRealTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditRealTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditRealTimeUITests.swift; sourceTree = "<group>"; };
 		EA549DE821597ABE00DFC066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA65534D2162B6C00096243D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				EA549DC621597ABC00DFC066 /* AppDelegate.swift */,
-				EA549DC821597ABC00DFC066 /* ViewController.swift */,
+				EA549DC821597ABC00DFC066 /* RisingStoriesViewController.swift */,
+				EA4E224D2187A0EE00269F54 /* RedditPostDownloadService.swift */,
+				EA4E224F2187A37D00269F54 /* RedditPost.swift */,
+				EA4E22512187A7D200269F54 /* PostTableViewCell.swift */,
+				EA65534F2162B6C60096243D /* UI Elements */,
 				EA549DCA21597ABC00DFC066 /* Main.storyboard */,
 				EA549DCD21597ABE00DFC066 /* Assets.xcassets */,
 				EA549DCF21597ABE00DFC066 /* LaunchScreen.storyboard */,
@@ -123,6 +135,14 @@
 				EA549DE821597ABE00DFC066 /* Info.plist */,
 			);
 			path = RedditRealTimeUITests;
+			sourceTree = "<group>";
+		};
+		EA65534F2162B6C60096243D /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				EA65534D2162B6C00096243D /* ActionButton.swift */,
+			);
+			path = "UI Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA549DC921597ABC00DFC066 /* ViewController.swift in Sources */,
+				EA4E22502187A37D00269F54 /* RedditPost.swift in Sources */,
+				EA4E224E2187A0EE00269F54 /* RedditPostDownloadService.swift in Sources */,
+				EA549DC921597ABC00DFC066 /* RisingStoriesViewController.swift in Sources */,
 				EA549DC721597ABC00DFC066 /* AppDelegate.swift in Sources */,
+				EA65534E2162B6C00096243D /* ActionButton.swift in Sources */,
+				EA4E22522187A7D200269F54 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
