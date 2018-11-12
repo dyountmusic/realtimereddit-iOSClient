@@ -9,20 +9,45 @@
 import UIKit
 
 class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet var tableView: UITableView!
     
     let redditPostFetcher = RedditPostDownloadService()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        
+//        redditPostFetcher.downloadPosts {
+//            self.redditPostFetcher.sortPosts()
+//
+//            DispatchQueue.main.async {
+//                self.tableView.dataSource = self
+//                self.tableView.reloadData()
+//            }
+//        }
+        
+    }
+    
+    @objc private func refreshPosts(_ sender: Any) {
+        // Fetch Weather Data
+        updateUI()
+    }
+    
+    func updateUI() {
+        
         redditPostFetcher.downloadPosts {
-            self.redditPostFetcher.sortPosts()
             
             DispatchQueue.main.async {
-                self.tableView.dataSource = self
                 self.tableView.reloadData()
             }
+            
         }
         
     }
