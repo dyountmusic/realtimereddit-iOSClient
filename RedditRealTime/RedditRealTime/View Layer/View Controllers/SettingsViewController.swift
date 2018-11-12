@@ -15,6 +15,19 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var subredditTextField: UITextField!
     @IBOutlet weak var loginButton: ActionButton!
     
+    var realTimeEnabled: Bool {
+        get { return UserDefaults.standard.bool(forKey: "RealTimeEnabled") }
+        set { UserDefaults.standard.set(newValue, forKey: "RealTimeEnabled") }
+    }
+    
+    fileprivate func checkForRealTime() {
+        if realTimeEnabled {
+            realTimeRefreshSwitch.isOn = true
+        } else {
+            realTimeRefreshSwitch.isOn = false
+        }
+    }
+    
     override func viewDidLoad() {
         loginButton.isHidden = true
     }
