@@ -46,12 +46,16 @@ class RedditPostDownloadService {
             guard let data = data else { return }
             
             do {
+                guard let decodedHTMLString = String(data: data, encoding: .utf8) else { return }
+                guard let data = decodedHTMLString.data(using: .utf8) else { return }
                 let redditData = try JSONDecoder().decode(RedditDataWrapper.self, from: data)
                 self.posts = [RedditPost]()
                 
                 for p in redditData.data.posts {
                     self.posts.append(p.data)
                 }
+                
+                print(redditData.data.posts[0].data.title)
                 
                 self.sortPosts()
                 
