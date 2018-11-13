@@ -73,7 +73,9 @@
                     <navigationItem key="navigationItem" title="Rising Stories" id="uEq-Nr-PYS">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="1Mb-vo-o88">
                             <connections>
-                                <segue destination="UVW-Nx-Aie" kind="show" id="jTM-2s-tNO"/>
+                                <segue destination="4T7-6V-YK4" kind="popoverPresentation" popoverAnchorBarButtonItem="1Mb-vo-o88" id="CFQ-Z9-kug">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,7 +128,7 @@
                                                 <rect key="frame" x="189" y="0.0" width="185" height="30"/>
                                                 <state key="normal" title="SubredditName"/>
                                                 <connections>
-                                                    <segue destination="dYX-1D-2Dv" kind="show" id="UEC-Ho-ONx"/>
+                                                    <segue destination="dYX-1D-2Dv" kind="show" id="CJN-Mm-IQ4"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -165,6 +167,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n27-H7-YDa"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="uB4-Kp-eig">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="mLl-vI-7T6">
+                            <connections>
+                                <segue destination="ngJ-6a-EEE" kind="unwind" identifier="" unwindAction="unwindToRisingStoriesWithSegue:" id="8zt-Ah-VOo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="loginButton" destination="MeL-Zh-p9b" id="shL-gU-f0k"/>
                         <outlet property="realTimeRefreshSwitch" destination="2zq-v3-bPh" id="1W4-C9-bkL"/>
@@ -172,8 +181,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvC-dp-2cF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ngJ-6a-EEE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1936.2318840579712" y="132.58928571428572"/>
+            <point key="canvasLocation" x="2846.376811594203" y="132.58928571428572"/>
         </scene>
         <!--Subreddits-->
         <scene sceneID="WU2-zY-87i">
@@ -206,13 +216,17 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
+                    <navigationItem key="navigationItem" id="EmD-uA-scu"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="subredditTable" destination="Gkq-eb-Voc" id="UZV-qk-QDQ"/>
+                        <segue destination="Yz6-fB-uuL" kind="unwind" identifier="unwindToSettings" unwindAction="unwindToSettingsWithSegue:" id="Qvb-tF-FoF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJe-dG-CW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Yz6-fB-uuL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3042.0289855072465" y="31.473214285714285"/>
+            <point key="canvasLocation" x="3952.1739130434785" y="31.473214285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fD4-JQ-ene">
@@ -231,6 +245,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMk-KA-OnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-15" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MLP-kh-3Dp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4T7-6V-YK4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2ch-uk-A38">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UVW-Nx-Aie" kind="relationship" relationship="rootViewController" id="ZyU-uv-Aly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5f-5G-FQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936.2318840579712" y="132.58928571428572"/>
         </scene>
     </scenes>
     <resources>

@@ -31,12 +31,17 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        navigationController?.navigationBar.prefersLargeTitles = false
         loginButton.isHidden = true
-        subredditName.setTitle(redditModel.subredditName, for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        subredditName.setTitle(redditModel.subredditName, for: .normal)
         checkForRealTime()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     @IBAction func refreshSwitchTapped(_ sender: Any) {
@@ -45,6 +50,10 @@ class SettingsViewController: UIViewController {
         } else {
             realTimeEnabled = false
         }
+    }
+    
+    @IBAction func unwindToSettings(segue: UIStoryboardSegue) {
+        
     }
     
 }

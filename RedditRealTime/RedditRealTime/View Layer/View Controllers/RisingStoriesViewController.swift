@@ -18,13 +18,14 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = redditPostFetcher.redditModel.subredditName
         setupTableView()
         updateUI()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        updateUI()
+        self.title = redditPostFetcher.redditModel.subredditName
         if realTimeController.realTimeEnabled {
             realTimeController.startTimer(viewController: self)
         }
@@ -87,6 +88,10 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         
         cell.redditPost = self.redditPostFetcher.posts[indexPath.row]
         return cell
+    }
+    
+    @IBAction func unwindToRisingStories(segue: UIStoryboardSegue) {
+        
     }
 
 

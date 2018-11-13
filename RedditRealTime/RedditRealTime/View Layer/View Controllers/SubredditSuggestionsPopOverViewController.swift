@@ -14,6 +14,7 @@ class ChangeSubredditView: UITableViewController {
     @IBOutlet var subredditTable: UITableView!
     
     var subredditDownloadService = RedditSubredditDownloadService()
+    var redditModel = MetaRedditModel()
     
     override func viewDidLoad() {
         subredditTable.dataSource = self
@@ -43,6 +44,12 @@ class ChangeSubredditView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subredditDownloadService.subreddits.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(subredditDownloadService.subreddits[indexPath.row])
+        redditModel.subredditName = subredditDownloadService.subreddits[indexPath.row].displayName
+        performSegue(withIdentifier: "unwindToSettings", sender: self)
     }
     
 }
