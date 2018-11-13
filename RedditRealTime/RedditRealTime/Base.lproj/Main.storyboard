@@ -168,7 +168,7 @@
                         <viewLayoutGuide key="safeArea" id="n27-H7-YDa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="uB4-Kp-eig">
-                        <barButtonItem key="leftBarButtonItem" title="Done" id="mLl-vI-7T6">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="mLl-vI-7T6">
                             <connections>
                                 <segue destination="ngJ-6a-EEE" kind="unwind" identifier="" unwindAction="unwindToRisingStoriesWithSegue:" id="8zt-Ah-VOo"/>
                             </connections>
@@ -216,8 +216,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EmD-uA-scu"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Subreddits" id="EmD-uA-scu"/>
                     <connections>
                         <outlet property="subredditTable" destination="Gkq-eb-Voc" id="UZV-qk-QDQ"/>
                         <segue destination="Yz6-fB-uuL" kind="unwind" identifier="unwindToSettings" unwindAction="unwindToSettingsWithSegue:" id="Qvb-tF-FoF"/>
