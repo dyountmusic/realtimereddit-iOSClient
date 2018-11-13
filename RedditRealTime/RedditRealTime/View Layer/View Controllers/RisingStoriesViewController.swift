@@ -25,7 +25,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         updateUI()
-        self.title = redditPostFetcher.redditModel.subredditName
+        self.title = redditPostFetcher.redditModel.subredditName.capitalized
         if realTimeController.realTimeEnabled {
             realTimeController.startTimer(viewController: self)
         }
@@ -53,7 +53,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func updateUI() {
-        print("Refreshing posts...")
+//        print("Refreshing posts...")
         redditPostFetcher.downloadPosts {
             
             self.redditPostFetcher.sortPosts()

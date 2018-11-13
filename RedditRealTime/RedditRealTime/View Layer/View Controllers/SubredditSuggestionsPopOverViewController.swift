@@ -47,7 +47,6 @@ class ChangeSubredditView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(subredditDownloadService.subreddits[indexPath.row])
         redditModel.subredditName = subredditDownloadService.subreddits[indexPath.row].displayName
         performSegue(withIdentifier: "unwindToSettings", sender: self)
     }

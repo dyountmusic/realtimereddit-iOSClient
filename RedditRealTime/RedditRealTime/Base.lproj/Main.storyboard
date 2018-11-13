@@ -216,7 +216,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Subreddits" id="EmD-uA-scu"/>
+                    <navigationItem key="navigationItem" title="Top Subreddits" id="EmD-uA-scu"/>
                     <connections>
                         <outlet property="subredditTable" destination="Gkq-eb-Voc" id="UZV-qk-QDQ"/>
                         <segue destination="Yz6-fB-uuL" kind="unwind" identifier="unwindToSettings" unwindAction="unwindToSettingsWithSegue:" id="Qvb-tF-FoF"/>

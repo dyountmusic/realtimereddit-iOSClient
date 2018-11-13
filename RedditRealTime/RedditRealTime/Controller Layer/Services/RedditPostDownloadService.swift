@@ -55,10 +55,7 @@ class RedditPostDownloadService {
                     self.posts.append(p.data)
                 }
                 
-                print(redditData.data.posts[0].data.title)
-                
                 self.sortPosts()
-                
                 self.removeDuplicates()
                 
                 completion()
