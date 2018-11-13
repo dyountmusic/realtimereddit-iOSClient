@@ -23,6 +23,12 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if realTimeController.realTimeEnabled {
+            realTimeController.startTimer(viewController: self)
+        }
+    }
+    
     func setupTableView() {
         
         if #available(iOS 10.0, *) {
@@ -37,10 +43,6 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)]
         refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Reddit Posts...", attributes: attributes)
         tableView.dataSource = self
-        
-        if realTimeController.realTimeEnabled {
-            realTimeController.startTimer(viewController: self)
-        }
         
     }
     

@@ -20,22 +20,13 @@ class RealTimeRefreshController {
     
     func startTimer(viewController: RisingStoriesViewController) {
         
-        if #available(iOS 10.0, *) {
-            timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
-                self?.realTimeEnabled = true
-                viewController.updateUI()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
+            if !self.realTimeEnabled {
+                self.stopTimer()
+                return
             }
-            
-        } else {
-            // Fallback on earlier versions
-            timerDispatchSourceTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
-            timerDispatchSourceTimer?.scheduleRepeating(deadline: .now(), interval: .seconds(60))
-            timerDispatchSourceTimer?.setEventHandler{
-                viewController.updateUI()
-            }
-            timerDispatchSourceTimer?.resume()
+            viewController.updateUI()
         }
-        realTimeEnabled = true
     }
     
     func stopTimer() {
