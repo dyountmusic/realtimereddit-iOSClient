@@ -11,7 +11,7 @@ import Foundation
 class MetaRedditModel {
     
     public var subredditName: String {
-        get { return UserDefaults.standard.string(forKey: "SubredditName") ?? "Politics" }
+        get { return UserDefaults.standard.string(forKey: "SubredditName")?.capitalized ?? "Politics" }
         set {
             UserDefaults.standard.set(newValue, forKey: "SubredditName")
             redditURL = "https://www.reddit.com/r/\(newValue)/rising.json?sort=new"
