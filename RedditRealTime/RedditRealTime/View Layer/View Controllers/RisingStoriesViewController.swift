@@ -13,15 +13,14 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet var tableView: UITableView!
     
     let redditPostFetcher = RedditPostDownloadService()
+    let realTimeController = RealTimeRefreshController()
     private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupTableView()
-        
         updateUI()
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func setupTableView() {
@@ -46,7 +45,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func updateUI() {
-        
+        print("Refreshing posts...")
         redditPostFetcher.downloadPosts {
             
             self.redditPostFetcher.sortPosts()

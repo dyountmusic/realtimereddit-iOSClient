@@ -32,4 +32,16 @@ class SettingsViewController: UIViewController {
         loginButton.isHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        checkForRealTime()
+    }
+    
+    @IBAction func refreshSwitchTapped(_ sender: Any) {
+        if realTimeRefreshSwitch.isOn {
+            realTimeEnabled = true
+        } else {
+            realTimeEnabled = false
+        }
+    }
+    
 }

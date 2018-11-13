@@ -83,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895.6521739130435" y="855.80357142857144"/>
+            <point key="canvasLocation" x="954" y="133"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wl5-XE-jPh">
@@ -107,6 +107,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2zq-v3-bPh">
                                                 <rect key="frame" x="325.33333333333331" y="0.0" width="50.666666666666686" height="31"/>
+                                                <connections>
+                                                    <action selector="refreshSwitchTapped:" destination="UVW-Nx-Aie" eventType="valueChanged" id="wQZ-A0-gUZ"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
