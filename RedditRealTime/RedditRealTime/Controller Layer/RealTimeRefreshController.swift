@@ -36,7 +36,4 @@ class RealTimeRefreshController {
         timer?.invalidate()
         timerDispatchSourceTimer?.cancel()
     }
-    
-    
-    
 }
