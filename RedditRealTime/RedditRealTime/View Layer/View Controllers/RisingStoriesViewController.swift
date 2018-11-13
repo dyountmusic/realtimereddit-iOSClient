@@ -18,6 +18,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = redditPostFetcher.redditModel.subredditName
         setupTableView()
         updateUI()
         navigationController?.navigationBar.prefersLargeTitles = true

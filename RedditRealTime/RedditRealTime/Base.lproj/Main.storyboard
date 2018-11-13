@@ -168,6 +168,7 @@
                     <connections>
                         <outlet property="loginButton" destination="MeL-Zh-p9b" id="shL-gU-f0k"/>
                         <outlet property="realTimeRefreshSwitch" destination="2zq-v3-bPh" id="1W4-C9-bkL"/>
+                        <outlet property="subredditName" destination="9od-1T-bVD" id="Wcb-oO-vlw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvC-dp-2cF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -177,30 +178,41 @@
         <!--Subreddits-->
         <scene sceneID="WU2-zY-87i">
             <objects>
-                <tableViewController title="Subreddits" id="dYX-1D-2Dv" sceneMemberID="viewController">
+                <tableViewController title="Subreddits" id="dYX-1D-2Dv" customClass="ChangeSubredditView" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gkq-eb-Voc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QbB-2u-NXt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubredditCell" textLabel="XrI-F3-B2r" style="IBUITableViewCellStyleDefault" id="QbB-2u-NXt" customClass="SubredditTableViewCell" customModule="RedditRealTime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QbB-2u-NXt" id="LkB-Bn-cji">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XrI-F3-B2r">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="XrI-F3-B2r" id="Xk3-mh-KAf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="dYX-1D-2Dv" id="N4P-KZ-Jhu"/>
-                            <outlet property="delegate" destination="dYX-1D-2Dv" id="yqi-z9-Ccy"/>
-                        </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="subredditTable" destination="Gkq-eb-Voc" id="UZV-qk-QDQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJe-dG-CW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3043" y="32"/>
+            <point key="canvasLocation" x="3042.0289855072465" y="31.473214285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fD4-JQ-ene">
