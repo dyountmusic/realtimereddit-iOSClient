@@ -38,6 +38,10 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Reddit Posts...", attributes: attributes)
         tableView.dataSource = self
         
+        if realTimeController.realTimeEnabled {
+            realTimeController.startTimer(viewController: self)
+        }
+        
     }
     
     @objc private func refreshPosts(_ sender: Any) {

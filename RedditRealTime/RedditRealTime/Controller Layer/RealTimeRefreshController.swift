@@ -20,8 +20,6 @@ class RealTimeRefreshController {
     
     func startTimer(viewController: RisingStoriesViewController) {
         
-        if realTimeEnabled { return }
-        
         if #available(iOS 10.0, *) {
             timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
                 self?.realTimeEnabled = true
