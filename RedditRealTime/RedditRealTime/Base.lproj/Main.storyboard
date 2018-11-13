@@ -133,7 +133,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="ActionButton" customModule="RedditRealTime" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="PillButton" customModule="RedditRealTime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="141" width="374" height="50"/>
                                         <color key="backgroundColor" name="RedditBrandColor"/>
                                         <constraints>

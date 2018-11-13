@@ -12,7 +12,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var realTimeRefreshSwitch: UISwitch!
-    @IBOutlet weak var loginButton: ActionButton!
+    @IBOutlet weak var loginButton: PillButton!
     @IBOutlet weak var subredditName: UIButton!
     
     var redditModel = MetaRedditModel()

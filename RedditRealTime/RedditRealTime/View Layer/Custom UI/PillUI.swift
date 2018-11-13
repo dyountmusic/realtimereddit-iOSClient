@@ -1,5 +1,5 @@
 //
-//  ActionButton.swift
+//  PillButton
 //  RedditRealTime
 //
 //  Created by Daniel Yount on 10/1/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable class ActionButton: UIButton {
+@IBDesignable class PillButton: UIButton {
     
     // MARK: IBInspectable Variables
     
