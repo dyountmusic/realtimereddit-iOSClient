@@ -29,37 +29,41 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-PW-sNo">
                                             <rect key="frame" x="20" y="11" width="374" height="86"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="86" id="CHa-83-3rB"/>
+                                                <constraint firstAttribute="height" constant="86" id="DFy-BG-1c4"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upvotes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTE-OD-1lo">
-                                            <rect key="frame" x="20" y="105" width="177" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTE-OD-1lo" customClass="PillUILabel" customModule="RedditRealTime" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="99" width="83" height="30"/>
+                                            <color key="backgroundColor" name="RedditBrandColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="177" id="7fT-IN-Sab"/>
+                                                <constraint firstAttribute="width" constant="83" id="2Iz-rz-Gai"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="tDS-jv-jYE"/>
+                                                <constraint firstAttribute="height" constant="30" id="wsz-Eb-Rw7"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLA-sJ-B4F">
-                                            <rect key="frame" x="205" y="105" width="189" height="21"/>
+                                            <rect key="frame" x="205" y="104" width="189" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="rLA-sJ-B4F" secondAttribute="trailing" id="Csg-Mr-fTy"/>
-                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="baseline" secondItem="rLA-sJ-B4F" secondAttribute="baseline" id="Gqx-8l-dvN"/>
-                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="top" secondItem="e8q-PW-sNo" secondAttribute="bottom" constant="8" symbolic="YES" id="O3G-Y2-E0l"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="top" secondItem="ucQ-lM-Hqu" secondAttribute="topMargin" id="Onx-HJ-78j"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="ucQ-lM-Hqu" secondAttribute="trailingMargin" id="T10-Vt-QhX"/>
-                                        <constraint firstItem="rLA-sJ-B4F" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="trailing" constant="8" symbolic="YES" id="a4o-0N-Hcq"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="ucQ-lM-Hqu" secondAttribute="leadingMargin" id="c3L-rA-byV"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="leading" id="dLB-eT-P5p"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="rLA-sJ-B4F" secondAttribute="trailing" id="1tE-V7-elZ"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="top" secondItem="ucQ-lM-Hqu" secondAttribute="topMargin" id="AvI-aa-LAp"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="ucQ-lM-Hqu" secondAttribute="trailingMargin" id="CIh-6k-9xw"/>
+                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="centerY" secondItem="rLA-sJ-B4F" secondAttribute="centerY" id="ZaW-y6-JID"/>
+                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="top" secondItem="e8q-PW-sNo" secondAttribute="bottom" constant="2" id="e7c-vZ-AaE"/>
+                                        <constraint firstItem="rLA-sJ-B4F" firstAttribute="top" secondItem="e8q-PW-sNo" secondAttribute="bottom" constant="7" id="l2p-qg-n2a"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="ucQ-lM-Hqu" secondAttribute="leadingMargin" id="tg1-FS-Utm"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="leading" id="ufn-Ec-dYI"/>
+                                        <constraint firstItem="rLA-sJ-B4F" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="trailing" constant="102" id="xV1-2v-noE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -85,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="133"/>
+            <point key="canvasLocation" x="953.62318840579712" y="132.58928571428572"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wl5-XE-jPh">
