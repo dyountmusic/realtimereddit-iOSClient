@@ -78,7 +78,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as? PostTableViewCell else { return UITableViewCell() }
         
-        cell.title.text = redditPostFetcher.posts[indexPath.row].title.removeHTMLEntities()?.string
+        cell.title.text = redditPostFetcher.posts[indexPath.row].title
         cell.upvotes.text = " \(redditPostFetcher.posts[indexPath.row].upvotes)"
         cell.comments.text = " \(redditPostFetcher.posts[indexPath.row].commentCount) Comments"
         

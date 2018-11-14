@@ -14,17 +14,17 @@ class MetaRedditModel {
         get { return UserDefaults.standard.string(forKey: "SubredditName")?.capitalized ?? "Politics" }
         set {
             UserDefaults.standard.set(newValue, forKey: "SubredditName")
-            redditURL = "https://www.reddit.com/r/\(newValue)/rising.json?sort=new"
+            redditURL = "https://www.reddit.com/r/\(newValue)/rising.json?sort=new&raw_json=1"
         }
     }
     
     public var redditURL: String {
-        get { return UserDefaults.standard.string(forKey: "RedditURL") ?? "https://www.reddit.com/r/politics/rising.json?sort=new" }
+        get { return UserDefaults.standard.string(forKey: "RedditURL") ?? "https://www.reddit.com/r/politics/rising.json?sort=new&raw_json=1" }
         set { UserDefaults.standard.set(newValue, forKey: "RedditURL") }
     }
     
     func resetRedditURL() {
-        redditURL = "https://www.reddit.com/r/politics/rising.json?sort=new"
+        redditURL = "https://www.reddit.com/r/politics/rising.json?sort=new&raw_json=1"
         subredditName = "Politics"
     }
     
