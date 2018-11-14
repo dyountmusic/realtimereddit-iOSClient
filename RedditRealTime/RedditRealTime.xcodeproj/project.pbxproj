@@ -18,7 +18,6 @@
 		EA549DDC21597ABE00DFC066 /* RedditRealTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DDB21597ABE00DFC066 /* RedditRealTimeTests.swift */; };
 		EA549DE721597ABE00DFC066 /* RedditRealTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */; };
 		EA571960219B438E00FB1109 /* PillUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57195F219B438E00FB1109 /* PillUI.swift */; };
-		EA571962219BA32D00FB1109 /* JSONMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA571961219BA32D00FB1109 /* JSONMock.swift */; };
 		EADE5304219A21A400271D37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE5303219A21A400271D37 /* SettingsViewController.swift */; };
 		EADE5306219A22E300271D37 /* RealTimeRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */; };
 		EADE5308219A78C400271D37 /* SubredditSuggestionsPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE5307219A78C400271D37 /* SubredditSuggestionsPopOverViewController.swift */; };
@@ -63,7 +62,6 @@
 		EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditRealTimeUITests.swift; sourceTree = "<group>"; };
 		EA549DE821597ABE00DFC066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA57195F219B438E00FB1109 /* PillUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillUI.swift; sourceTree = "<group>"; };
-		EA571961219BA32D00FB1109 /* JSONMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMock.swift; sourceTree = "<group>"; };
 		EADE5303219A21A400271D37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeRefreshController.swift; sourceTree = "<group>"; };
 		EADE5307219A78C400271D37 /* SubredditSuggestionsPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditSuggestionsPopOverViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				EA549DDB21597ABE00DFC066 /* RedditRealTimeTests.swift */,
-				EA571961219BA32D00FB1109 /* JSONMock.swift */,
 				EA549DDD21597ABE00DFC066 /* Info.plist */,
 			);
 			path = RedditRealTimeTests;
@@ -369,7 +366,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA549DDC21597ABE00DFC066 /* RedditRealTimeTests.swift in Sources */,
-				EA571962219BA32D00FB1109 /* JSONMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
