@@ -13,7 +13,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var realTimeRefreshSwitch: UISwitch!
     @IBOutlet weak var loginButton: PillButton!
-    @IBOutlet weak var subredditName: UIButton!
     
     var redditModel = MetaRedditModel()
     
@@ -33,11 +32,6 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = false
         loginButton.isHidden = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        subredditName.setTitle(redditModel.subredditName, for: .normal)
-        checkForRealTime()
     }
     
     override func viewDidAppear(_ animated: Bool) {

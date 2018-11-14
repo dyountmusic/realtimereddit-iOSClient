@@ -48,7 +48,11 @@ class ChangeSubredditView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         redditModel.subredditName = subredditDownloadService.subreddits[indexPath.row].displayName
-        performSegue(withIdentifier: "unwindToSettings", sender: self)
+        performSegue(withIdentifier: "unwindToRisingStoriesWithSegue", sender: self)
+    }
+    
+    @IBAction func unwindToRisingStoriesWithSegue(segue: UIStoryboardSegue) {
+        
     }
     
 }
