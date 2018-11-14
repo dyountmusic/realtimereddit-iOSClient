@@ -78,13 +78,9 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as? PostTableViewCell else { return UITableViewCell() }
         
-        cell.backgroundColor = .white
-        
-        cell.title.text = redditPostFetcher.posts[indexPath.row].title
+        cell.title.text = removeHTMLEntities(str: redditPostFetcher.posts[indexPath.row].title)?.string
         cell.upvotes.text = " \(redditPostFetcher.posts[indexPath.row].upvotes) Upvotes"
         cell.comments.text = " \(redditPostFetcher.posts[indexPath.row].commentCount) Comments"
-        
-        cell.title.textColor = .black
         
         cell.redditPost = self.redditPostFetcher.posts[indexPath.row]
         return cell
@@ -92,6 +88,25 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBAction func unwindToRisingStories(segue: UIStoryboardSegue) {
         
+    }
+    
+    private func removeHTMLEntities(str: String) -> NSAttributedString? {
+        
+        let data = str.data(using: .utf8)
+        
+        let options : [NSAttributedString.DocumentReadingOptionKey : Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+        
+        do {
+            let attributedString = try NSAttributedString(data: data!, options: options, documentAttributes: nil)
+            return attributedString
+        } catch {
+            print(error)
+        }
+        
+        return nil
     }
 
 

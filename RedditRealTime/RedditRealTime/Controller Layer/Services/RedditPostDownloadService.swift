@@ -46,8 +46,6 @@ class RedditPostDownloadService {
             guard let data = data else { return }
             
             do {
-                guard let decodedHTMLString = String(data: data, encoding: .utf8) else { return }
-                guard let data = decodedHTMLString.data(using: .utf8) else { return }
                 let redditData = try JSONDecoder().decode(RedditDataWrapper.self, from: data)
                 self.posts = [RedditPost]()
                 
