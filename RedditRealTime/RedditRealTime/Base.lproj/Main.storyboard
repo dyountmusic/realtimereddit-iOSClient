@@ -1,24 +1,308 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWX-at-b9O">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rising Stories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
+                <viewController title="Rising Stories" id="BYZ-38-t0r" customClass="RisingStoriesViewController" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="JwG-RW-ROl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" id="2hZ-Tc-KQK" customClass="PostTableViewCell" customModule="RedditRealTime" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hZ-Tc-KQK" id="ucQ-lM-Hqu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-PW-sNo">
+                                            <rect key="frame" x="20" y="11" width="374" height="86"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="86" id="DFy-BG-1c4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTE-OD-1lo" customClass="PillUILabel" customModule="RedditRealTime" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="99" width="83" height="30"/>
+                                            <color key="backgroundColor" name="RedditBrandColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="83" id="2Iz-rz-Gai"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="tDS-jv-jYE"/>
+                                                <constraint firstAttribute="height" constant="30" id="wsz-Eb-Rw7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLA-sJ-B4F">
+                                            <rect key="frame" x="205" y="104" width="189" height="20"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="rLA-sJ-B4F" secondAttribute="trailing" id="1tE-V7-elZ"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="top" secondItem="ucQ-lM-Hqu" secondAttribute="topMargin" id="AvI-aa-LAp"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="ucQ-lM-Hqu" secondAttribute="trailingMargin" id="CIh-6k-9xw"/>
+                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="centerY" secondItem="rLA-sJ-B4F" secondAttribute="centerY" id="ZaW-y6-JID"/>
+                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="top" secondItem="e8q-PW-sNo" secondAttribute="bottom" constant="2" id="e7c-vZ-AaE"/>
+                                        <constraint firstItem="rLA-sJ-B4F" firstAttribute="top" secondItem="e8q-PW-sNo" secondAttribute="bottom" constant="7" id="l2p-qg-n2a"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="ucQ-lM-Hqu" secondAttribute="leadingMargin" id="tg1-FS-Utm"/>
+                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="leading" id="ufn-Ec-dYI"/>
+                                        <constraint firstItem="rLA-sJ-B4F" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="trailing" constant="102" id="xV1-2v-noE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="comments" destination="rLA-sJ-B4F" id="rzQ-uq-Fep"/>
+                                    <outlet property="title" destination="e8q-PW-sNo" id="OSE-SB-dmt"/>
+                                    <outlet property="upvotes" destination="NTE-OD-1lo" id="kw7-oa-5mW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rising Stories" id="uEq-Nr-PYS">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" style="plain" id="OcV-SJ-rPa">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SvE-TX-vP7">
+                                    <rect key="frame" x="364" y="7" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="SubredditIcon"/>
+                                    <connections>
+                                        <segue destination="Qn9-kP-Oez" kind="popoverPresentation" popoverAnchorView="SvE-TX-vP7" id="WgZ-8i-sC9">
+                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                        </segue>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem title="Item" style="plain" id="8BN-AA-jc3">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c4D-f6-fsc">
+                                    <rect key="frame" x="326" y="7" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="RealTimeIcon"/>
+                                    <connections>
+                                        <segue destination="4T7-6V-YK4" kind="popoverPresentation" popoverAnchorView="c4D-f6-fsc" id="VkF-L2-mlw">
+                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                        </segue>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="realTimeBarButton" destination="8BN-AA-jc3" id="0rC-ba-NiU"/>
+                        <outlet property="subredditBarButton" destination="OcV-SJ-rPa" id="dDF-j1-bgz"/>
+                        <outlet property="tableView" destination="JwG-RW-ROl" id="aHW-Cf-2ho"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="953.62318840579712" y="132.58928571428572"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="wl5-XE-jPh">
+            <objects>
+                <viewController title="Settings" id="UVW-Nx-Aie" customClass="SettingsViewController" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fz6-iV-QJ9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-XR-3KV">
+                                <rect key="frame" x="20" y="124" width="374" height="121"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="qi2-dK-Gm4">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Time Refresh " lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6u-GZ-dT2">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="31"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2zq-v3-bPh">
+                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="refreshSwitchTapped:" destination="UVW-Nx-Aie" eventType="valueChanged" id="wQZ-A0-gUZ"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-Zh-p9b" customClass="PillButton" customModule="RedditRealTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71" width="374" height="50"/>
+                                        <color key="backgroundColor" name="RedditBrandColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ada-D6-g8e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Log into Reddit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundButtonColor">
+                                                <color key="value" name="RedditBrandColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightButtonColor">
+                                                <color key="value" name="RedditBrandColorHighlighted"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="T8x-EN-x0M"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TTZ-XR-3KV" firstAttribute="leading" secondItem="n27-H7-YDa" secondAttribute="leading" constant="20" id="Aun-O2-siU"/>
+                            <constraint firstItem="TTZ-XR-3KV" firstAttribute="top" secondItem="n27-H7-YDa" secondAttribute="top" constant="36" id="SU4-ad-zVD"/>
+                            <constraint firstItem="n27-H7-YDa" firstAttribute="trailing" secondItem="TTZ-XR-3KV" secondAttribute="trailing" constant="20" id="mSu-cR-gso"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n27-H7-YDa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Real Time Settings" id="uB4-Kp-eig">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="mLl-vI-7T6">
+                            <connections>
+                                <segue destination="ngJ-6a-EEE" kind="unwind" identifier="" unwindAction="unwindToRisingStoriesWithSegue:" id="8zt-Ah-VOo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginButton" destination="MeL-Zh-p9b" id="shL-gU-f0k"/>
+                        <outlet property="realTimeRefreshSwitch" destination="2zq-v3-bPh" id="1W4-C9-bkL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvC-dp-2cF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ngJ-6a-EEE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2919" y="-421"/>
+        </scene>
+        <!--Subreddits-->
+        <scene sceneID="WU2-zY-87i">
+            <objects>
+                <tableViewController title="Subreddits" id="dYX-1D-2Dv" customClass="ChangeSubredditView" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gkq-eb-Voc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubredditCell" textLabel="XrI-F3-B2r" style="IBUITableViewCellStyleDefault" id="QbB-2u-NXt" customClass="SubredditTableViewCell" customModule="RedditRealTime" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QbB-2u-NXt" id="LkB-Bn-cji">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XrI-F3-B2r">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="XrI-F3-B2r" id="Xk3-mh-KAf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Top Subreddits" id="EmD-uA-scu">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="z80-6T-6vy">
+                            <connections>
+                                <segue destination="Yz6-fB-uuL" kind="unwind" unwindAction="unwindToRisingStoriesWithSegue:" id="TqE-H5-WAa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="subredditTable" destination="Gkq-eb-Voc" id="UZV-qk-QDQ"/>
+                        <segue destination="Yz6-fB-uuL" kind="unwind" identifier="unwindToRisingStoriesWithSegue" unwindAction="unwindToRisingStoriesWithSegue:" id="Zci-vQ-QOp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJe-dG-CW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Yz6-fB-uuL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2915.9420289855075" y="288.61607142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fD4-JQ-ene">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yWX-at-b9O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7H1-ia-ygj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0PH-2L-sS5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMk-KA-OnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MLP-kh-3Dp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4T7-6V-YK4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2ch-uk-A38">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UVW-Nx-Aie" kind="relationship" relationship="rootViewController" id="ZyU-uv-Aly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5f-5G-FQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="-421"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="21Z-9Q-x4p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qn9-kP-Oez" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KZX-M0-DL5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dYX-1D-2Dv" kind="relationship" relationship="rootViewController" id="Lgw-hb-rCL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ily-k7-LEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.7971014492755" y="288.61607142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RealTimeIcon" width="30" height="30"/>
+        <image name="SubredditIcon" width="30" height="30"/>
+        <namedColor name="RedditBrandColor">
+            <color red="0.96470588235294119" green="0.35294117647058826" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="RedditBrandColorHighlighted">
+            <color red="1" green="0.83921568627450982" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>
