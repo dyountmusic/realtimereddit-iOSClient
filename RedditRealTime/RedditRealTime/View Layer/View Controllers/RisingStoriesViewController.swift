@@ -22,12 +22,12 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
         tableView.dataSource = self
         setUpRefreshControl()
+        updateUI()
         setUpTimer()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        updateUI()
         setUpTimer()
         self.title = redditPostFetcher.redditModel.subredditName
     }

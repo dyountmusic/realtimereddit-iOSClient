@@ -12,7 +12,7 @@ import UIKit
 class PostTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var upvotes: UILabel!
+    @IBOutlet weak var upvotes: PillUILabel!
     @IBOutlet weak var comments: UILabel!
     
     //var redditAPIService: RedditAPIService?
