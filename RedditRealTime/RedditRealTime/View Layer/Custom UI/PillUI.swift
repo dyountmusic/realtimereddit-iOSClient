@@ -11,15 +11,21 @@ import UIKit
 
 @IBDesignable class PillUILabel: UILabel {
 
-    func setup() {
-        layer.cornerRadius = frame.height / 2
-        print(frame.size.height)
-        clipsToBounds = true
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
         setup()
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    func setup() {
+        layer.cornerRadius = 15
+        clipsToBounds = true
+    }
+
 }
 
 
