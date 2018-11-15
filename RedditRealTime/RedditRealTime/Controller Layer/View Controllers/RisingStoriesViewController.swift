@@ -116,13 +116,13 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         switch redditPostFetcher.posts[indexPath.row].upvotes {
         case 50...99:
             cell.upvotes.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        case 100...249:
+        case 100...499:
             cell.upvotes.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        case 250...499:
-            cell.upvotes.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         case 500...999:
+            cell.upvotes.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        case 1000...2499:
             cell.upvotes.backgroundColor = #colorLiteral(red: 1, green: 0.3648655713, blue: 0, alpha: 1)
-        case 1000...:
+        case 2500...:
             cell.upvotes.backgroundColor = #colorLiteral(red: 0.9689580798, green: 0, blue: 0, alpha: 1)
         default:
             cell.upvotes.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
