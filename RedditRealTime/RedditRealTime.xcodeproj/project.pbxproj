@@ -18,6 +18,8 @@
 		EA549DDC21597ABE00DFC066 /* RedditRealTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DDB21597ABE00DFC066 /* RedditRealTimeTests.swift */; };
 		EA549DE721597ABE00DFC066 /* RedditRealTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */; };
 		EA65534E2162B6C00096243D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65534D2162B6C00096243D /* ActionButton.swift */; };
+		EADE5304219A21A400271D37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE5303219A21A400271D37 /* SettingsViewController.swift */; };
+		EADE5306219A22E300271D37 /* RealTimeRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditRealTimeUITests.swift; sourceTree = "<group>"; };
 		EA549DE821597ABE00DFC066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA65534D2162B6C00096243D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		EADE5303219A21A400271D37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeRefreshController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				EA549DC821597ABC00DFC066 /* RisingStoriesViewController.swift */,
+				EADE5303219A21A400271D37 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		EA4791FE2190D188001413A4 /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
+				EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */,
 				EA4791FF2190D196001413A4 /* Services */,
 			);
 			path = "Controller Layer";
@@ -324,8 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADE5306219A22E300271D37 /* RealTimeRefreshController.swift in Sources */,
 				EA4E22502187A37D00269F54 /* RedditPost.swift in Sources */,
 				EA4E224E2187A0EE00269F54 /* RedditPostDownloadService.swift in Sources */,
+				EADE5304219A21A400271D37 /* SettingsViewController.swift in Sources */,
 				EA549DC921597ABC00DFC066 /* RisingStoriesViewController.swift in Sources */,
 				EA549DC721597ABC00DFC066 /* AppDelegate.swift in Sources */,
 				EA65534E2162B6C00096243D /* ActionButton.swift in Sources */,

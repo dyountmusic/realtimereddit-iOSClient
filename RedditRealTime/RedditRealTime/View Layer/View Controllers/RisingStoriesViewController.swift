@@ -9,20 +9,59 @@
 import UIKit
 
 class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet var tableView: UITableView!
     
     let redditPostFetcher = RedditPostDownloadService()
+    let realTimeController = RealTimeRefreshController()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        updateUI()
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if realTimeController.realTimeEnabled {
+            realTimeController.startTimer(viewController: self)
+        }
+    }
+    
+    func setupTableView() {
         
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        
+        refreshControl.layer.zPosition = -1
+        refreshControl.addTarget(self, action: #selector(refreshPosts(_:)), for: .valueChanged)
+        refreshControl.tintColor = #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)
+        let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)]
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Reddit Posts...", attributes: attributes)
+        tableView.dataSource = self
+        
+    }
+    
+    @objc private func refreshPosts(_ sender: Any) {
+        updateUI()
+    }
+    
+    func updateUI() {
+        print("Refreshing posts...")
         redditPostFetcher.downloadPosts {
+            
             self.redditPostFetcher.sortPosts()
             
             DispatchQueue.main.async {
-                self.tableView.dataSource = self
+                self.refreshControl.beginRefreshing()
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
+            
         }
         
     }
