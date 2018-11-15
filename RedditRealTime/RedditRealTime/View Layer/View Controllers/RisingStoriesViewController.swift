@@ -22,16 +22,18 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
         tableView.dataSource = self
         setUpRefreshControl()
-        updateUI()
+        setUpTimer()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         updateUI()
+        setUpTimer()
         self.title = redditPostFetcher.redditModel.subredditName
-        if realTimeController.realTimeEnabled {
-            realTimeController.startTimer(viewController: self)
-        }
+    }
+    
+    private func setUpTimer() {
+        realTimeController.startTimer(viewController: self)
     }
     
     private func setUpRefreshControl() {
@@ -60,7 +62,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
             realTimeBarButton.tintColor = .blue
         }
         
-//        print("Refreshing posts...")
+        print("Refreshing posts...")
         redditPostFetcher.downloadPosts {
             
             self.redditPostFetcher.sortPosts()

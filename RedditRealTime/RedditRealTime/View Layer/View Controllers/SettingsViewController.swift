@@ -32,10 +32,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = false
         loginButton.isHidden = true
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
+        checkForRealTime()
     }
     
     @IBAction func refreshSwitchTapped(_ sender: Any) {
@@ -44,10 +41,6 @@ class SettingsViewController: UIViewController {
         } else {
             realTimeEnabled = false
         }
-    }
-    
-    @IBAction func unwindToSettings(segue: UIStoryboardSegue) {
-        
     }
     
 }

@@ -16,24 +16,26 @@ class RealTimeRefreshController {
     }
     
     weak var timer: Timer?
-    var timerDispatchSourceTimer : DispatchSourceTimer?
     
     func startTimer(viewController: RisingStoriesViewController) {
         
+        if !realTimeEnabled {
+            stopTimer()
+            return
+        }
+        
+        // Prevents duplicate timers
+        stopTimer()
+        
+        print("Starting timer.")
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { _ in
-            if !self.realTimeEnabled {
-                self.stopTimer()
-                return
-            }
             viewController.updateUI()
         }
     }
     
     func stopTimer() {
-        
-        realTimeEnabled = false
+        print("Stopping timer.")
         
         timer?.invalidate()
-        timerDispatchSourceTimer?.cancel()
     }
 }
