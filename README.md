@@ -1,2 +1,3 @@
-# realtimereddit-iOSClient
-A real time reddit API client for iOS
+# Real Time Reddit for iOS
+
+Public TestFlight Link: https://testflight.apple.com/join/2Z6pGpNN
