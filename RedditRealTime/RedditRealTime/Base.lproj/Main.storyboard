@@ -37,7 +37,6 @@
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTE-OD-1lo" customClass="PillUILabel" customModule="RedditRealTime" customModuleProvider="target">
                                             <rect key="frame" x="20" y="99" width="83" height="30"/>
-                                            <color key="backgroundColor" name="RedditBrandColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="83" id="2Iz-rz-Gai"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="tDS-jv-jYE"/>
@@ -104,6 +103,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="realTimeBarButton" destination="8BN-AA-jc3" id="0rC-ba-NiU"/>
+                        <outlet property="realTimeIcon" destination="8BN-AA-jc3" id="LA0-pc-qVH"/>
                         <outlet property="subredditBarButton" destination="OcV-SJ-rPa" id="dDF-j1-bgz"/>
                         <outlet property="tableView" destination="JwG-RW-ROl" id="aHW-Cf-2ho"/>
                     </connections>
@@ -296,7 +296,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="RealTimeIcon" width="30" height="30"/>
+        <image name="RealTimeIcon" width="27" height="24"/>
         <image name="SubredditIcon" width="30" height="30"/>
         <namedColor name="RedditBrandColor">
             <color red="0.96470588235294119" green="0.35294117647058826" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

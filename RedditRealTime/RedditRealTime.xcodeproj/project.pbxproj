@@ -112,8 +112,6 @@
 		EA4791FA2190D136001413A4 /* View Layer */ = {
 			isa = PBXGroup;
 			children = (
-				EA4791FD2190D16F001413A4 /* Table View Cells */,
-				EA4791FB2190D15A001413A4 /* View Controllers */,
 				EA65534F2162B6C60096243D /* Custom UI */,
 			);
 			path = "View Layer";
@@ -141,6 +139,8 @@
 		EA4791FE2190D188001413A4 /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
+				EA4791FD2190D16F001413A4 /* Table View Cells */,
+				EA4791FB2190D15A001413A4 /* View Controllers */,
 				EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */,
 				EA4791FF2190D196001413A4 /* Services */,
 			);
