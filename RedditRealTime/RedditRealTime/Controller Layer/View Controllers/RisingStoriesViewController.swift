@@ -121,9 +121,9 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         case 250...499:
             cell.upvotes.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         case 500...999:
-            cell.upvotes.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+            cell.upvotes.backgroundColor = #colorLiteral(red: 1, green: 0.3648655713, blue: 0, alpha: 1)
         case 1000...:
-            cell.upvotes.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+            cell.upvotes.backgroundColor = #colorLiteral(red: 0.9689580798, green: 0, blue: 0, alpha: 1)
         default:
             cell.upvotes.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         }
