@@ -80,8 +80,6 @@
                                     <state key="normal" image="SubredditIcon"/>
                                     <connections>
                                         <segue destination="Qn9-kP-Oez" kind="popoverPresentation" popoverAnchorView="SvE-TX-vP7" id="WgZ-8i-sC9">
-                                            <segue key="commit" inheritsFrom="parent" id="tX6-y0-ot5"/>
-                                            <segue key="preview" inheritsFrom="commit" id="73g-dW-fEx"/>
                                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                         </segue>
                                     </connections>
@@ -94,8 +92,6 @@
                                     <state key="normal" image="RealTimeIcon"/>
                                     <connections>
                                         <segue destination="njQ-if-Akr" kind="popoverPresentation" popoverAnchorView="c4D-f6-fsc" id="yoL-x8-iqj">
-                                            <segue key="commit" inheritsFrom="parent" id="Oyu-iI-CbM"/>
-                                            <segue key="preview" inheritsFrom="commit" id="Q2x-6N-M7U"/>
                                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                         </segue>
                                     </connections>
@@ -287,8 +283,4 @@
         <image name="RealTimeIcon" width="27" height="24"/>
         <image name="SubredditIcon" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yoL-x8-iqj"/>
-        <segue reference="WgZ-8i-sC9"/>
-    </inferredMetricsTieBreakers>
 </document>
