@@ -107,7 +107,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as? PostTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PCell") as? PostTableViewCell else { return UITableViewCell() }
         
         cell.title.text = redditPostFetcher.posts[indexPath.row].title
         cell.upvotes.text = " \(redditPostFetcher.posts[indexPath.row].upvotes)"
