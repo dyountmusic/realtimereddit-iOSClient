@@ -11,6 +11,7 @@ import Foundation
 class RedditPostDownloadService {
     
     // MARK: Properties
+    var redditModel = MetaRedditModel()
     
     // These properties are used to store the fetched data for reference
     var posts = [RedditPost]()
@@ -25,7 +26,7 @@ class RedditPostDownloadService {
         //save the current state before it is overwritten
         previousState = computeState()
         
-        let jsonURLString = "https://www.reddit.com/r/politics/rising.json?sort=new"
+        let jsonURLString = redditModel.redditURL
         guard let url = URL(string: jsonURLString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -53,7 +54,6 @@ class RedditPostDownloadService {
                 }
                 
                 self.sortPosts()
-                
                 self.removeDuplicates()
                 
                 completion()

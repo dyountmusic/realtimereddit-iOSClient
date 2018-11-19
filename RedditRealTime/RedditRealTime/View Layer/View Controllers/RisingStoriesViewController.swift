@@ -11,6 +11,8 @@ import UIKit
 class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var realTimeBarButton: UIBarButtonItem!
+    @IBOutlet weak var subredditBarButton: UIBarButtonItem!
     
     let redditPostFetcher = RedditPostDownloadService()
     let realTimeController = RealTimeRefreshController()
@@ -18,18 +20,23 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        tableView.dataSource = self
+        setUpRefreshControl()
         updateUI()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if realTimeController.realTimeEnabled {
-            realTimeController.startTimer(viewController: self)
-        }
+        setUpTimer()
+        self.title = redditPostFetcher.redditModel.subredditName
+        updateUI()
     }
     
-    func setupTableView() {
+    private func setUpTimer() {
+        realTimeController.startTimer(viewController: self)
+    }
+    
+    private func setUpRefreshControl() {
         
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshControl
@@ -40,10 +47,9 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         refreshControl.layer.zPosition = -1
         refreshControl.addTarget(self, action: #selector(refreshPosts(_:)), for: .valueChanged)
         refreshControl.tintColor = #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)
+        
         let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)]
         refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Reddit Posts...", attributes: attributes)
-        tableView.dataSource = self
-        
     }
     
     @objc private func refreshPosts(_ sender: Any) {
@@ -51,6 +57,11 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func updateUI() {
+        
+        if realTimeController.realTimeEnabled {
+            realTimeBarButton.tintColor = .blue
+        }
+        
         print("Refreshing posts...")
         redditPostFetcher.downloadPosts {
             
@@ -61,9 +72,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
             }
-            
         }
-        
     }
     
     // MARK: TableView Functions
@@ -76,16 +85,16 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as? PostTableViewCell else { return UITableViewCell() }
         
-        cell.backgroundColor = .white
-        
         cell.title.text = redditPostFetcher.posts[indexPath.row].title
-        cell.upvotes.text = " \(redditPostFetcher.posts[indexPath.row].upvotes) Upvotes"
+        cell.upvotes.text = " \(redditPostFetcher.posts[indexPath.row].upvotes)"
         cell.comments.text = " \(redditPostFetcher.posts[indexPath.row].commentCount) Comments"
-        
-        cell.title.textColor = .black
         
         cell.redditPost = self.redditPostFetcher.posts[indexPath.row]
         return cell
+    }
+    
+    @IBAction func unwindToRisingStories(segue: UIStoryboardSegue) {
+        
     }
 
 

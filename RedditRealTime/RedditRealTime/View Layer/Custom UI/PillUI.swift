@@ -1,5 +1,5 @@
 //
-//  ActionButton.swift
+//  PillButton
 //  RedditRealTime
 //
 //  Created by Daniel Yount on 10/1/18.
@@ -9,7 +9,27 @@
 import Foundation
 import UIKit
 
-@IBDesignable class ActionButton: UIButton {
+@IBDesignable class PillUILabel: UILabel {
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        setup()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    func setup() {
+        layer.cornerRadius = 15
+        clipsToBounds = true
+    }
+
+}
+
+
+@IBDesignable class PillButton: UIButton {
     
     // MARK: IBInspectable Variables
     

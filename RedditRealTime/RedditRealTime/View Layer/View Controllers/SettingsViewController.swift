@@ -12,8 +12,9 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var realTimeRefreshSwitch: UISwitch!
-    @IBOutlet weak var subredditTextField: UITextField!
-    @IBOutlet weak var loginButton: ActionButton!
+    @IBOutlet weak var loginButton: PillButton!
+    
+    var redditModel = MetaRedditModel()
     
     var realTimeEnabled: Bool {
         get { return UserDefaults.standard.bool(forKey: "RealTimeEnabled") }
@@ -29,10 +30,8 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        navigationController?.navigationBar.prefersLargeTitles = false
         loginButton.isHidden = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         checkForRealTime()
     }
     

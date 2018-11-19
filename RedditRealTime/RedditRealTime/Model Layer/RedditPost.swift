@@ -34,7 +34,7 @@ struct RedditPosts: Codable {
 }
 
 struct RedditPost: Codable, Hashable {
-    let title: String
+    var title: String
     let upvotes: Int
     let url: String
     let thumbnail: String
