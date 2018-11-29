@@ -151,6 +151,37 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="peP-yd-dWb">
+                                        <rect key="frame" x="0.0" y="55" width="414" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="peP-yd-dWb" id="U4c-FS-8CP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Display On" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3f-pw-dop">
+                                                    <rect key="frame" x="20" y="11.666666666666666" width="126" height="31.333333333333336"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLR-rq-R4d">
+                                                    <rect key="frame" x="341" y="11.666666666666666" width="51" height="31.333333333333336"/>
+                                                    <connections>
+                                                        <action selector="realTimeRefreshSwitchTapped:" destination="Rzf-Od-jHG" eventType="valueChanged" id="FKT-bB-ad2"/>
+                                                        <action selector="willDeviceSleepSwitchTapped:" destination="Rzf-Od-jHG" eventType="valueChanged" id="lh0-it-ziJ"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F3f-pw-dop" firstAttribute="bottom" secondItem="gLR-rq-R4d" secondAttribute="bottom" id="Jvc-1A-QYa"/>
+                                                <constraint firstItem="F3f-pw-dop" firstAttribute="centerY" secondItem="U4c-FS-8CP" secondAttribute="centerY" id="Ma5-K7-xF1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="F3f-pw-dop" secondAttribute="bottom" constant="1" id="Rfb-HU-agr"/>
+                                                <constraint firstItem="F3f-pw-dop" firstAttribute="leading" secondItem="U4c-FS-8CP" secondAttribute="leadingMargin" id="Y3x-cm-fIm"/>
+                                                <constraint firstItem="F3f-pw-dop" firstAttribute="top" secondItem="gLR-rq-R4d" secondAttribute="top" id="jUN-3s-xYk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gLR-rq-R4d" secondAttribute="trailing" constant="4" id="kZD-ZZ-2cg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -168,6 +199,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="realTimeRefreshSwitch" destination="2zq-v3-bPh" id="kvE-mS-Yh5"/>
+                        <outlet property="willDeviceSleepSwitch" destination="gLR-rq-R4d" id="AuF-zh-BHc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWn-rW-dGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
