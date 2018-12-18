@@ -93,7 +93,7 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "AppIcon40pt.jpg",
+      "filename" : "AppIcon40pt-1.jpg",
       "scale" : "1x"
     },
     {
@@ -105,19 +105,19 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "AppIcon76pt.jpg",
+      "filename" : "AppIcon76pt-1.jpg",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "AppIcon76pt@2x.jpg",
+      "filename" : "AppIcon76pt@2x-1.jpg",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "AppIcon83.5@2x.jpg",
+      "filename" : "AppIcon83.5@2x-1.jpg",
       "scale" : "2x"
     },
     {
@@ -125,42 +125,6 @@
       "idiom" : "ios-marketing",
       "filename" : "AppIcon1024pt.jpg",
       "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "AppIcon60pt.jpg",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "AppIcon83.5.jpg",
-      "unassigned" : true,
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "AppIcon83.5-1.jpg",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "AppIcon57pt@3x.jpg",
-      "unassigned" : true,
-      "scale" : "3x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "AppIcon76pt@3x.jpg",
-      "unassigned" : true,
-      "scale" : "3x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "AppIcon83.5@3x.jpg",
-      "unassigned" : true,
-      "scale" : "3x"
     }
   ],
   "info" : {
