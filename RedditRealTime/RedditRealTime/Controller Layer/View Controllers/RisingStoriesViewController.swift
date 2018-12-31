@@ -37,6 +37,12 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     //MARK: Set Up Functions
     
     private func setUpFirstTimeUI() {
+        
+        if redditPostFetcher.redditModel.subredditName == "" {
+            let unconfiguredView = self.storyboard?.instantiateViewController(withIdentifier: "UnconfiguredView") as! UnconfiguredRedditViewController
+            self.present(unconfiguredView, animated: true, completion: nil)
+        }
+        
         // Register for 3D touch Peak and Pop
         if (traitCollection.forceTouchCapability == .available) {
             registerForPreviewing(with: self, sourceView: view)
@@ -69,7 +75,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
         refreshControl.tintColor = #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)
         
         let attributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.2888048291, blue: 0.1251261532, alpha: 1)]
-        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Reddit Posts...", attributes: attributes)
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing...", attributes: attributes)
     }
     
     // Called when Refresh Control Detects a "Pull-to-Refresh" gesture

@@ -19,6 +19,7 @@
 		EA549DE721597ABE00DFC066 /* RedditRealTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA549DE621597ABE00DFC066 /* RedditRealTimeUITests.swift */; };
 		EA571960219B438E00FB1109 /* PillUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57195F219B438E00FB1109 /* PillUI.swift */; };
 		EA93778D219D0E7F0013594D /* Squircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93778C219D0E7F0013594D /* Squircle.swift */; };
+		EA95141921CDF1940025CB29 /* UnconfiguredRedditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA95141821CDF1940025CB29 /* UnconfiguredRedditViewController.swift */; };
 		EAC3A16A219E0D4800907D4A /* RealTimeSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC3A169219E0D4800907D4A /* RealTimeSettingsTableViewController.swift */; };
 		EADE5306219A22E300271D37 /* RealTimeRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */; };
 		EADE5308219A78C400271D37 /* SubredditSuggestionsPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE5307219A78C400271D37 /* SubredditSuggestionsPopOverViewController.swift */; };
@@ -64,6 +65,7 @@
 		EA549DE821597ABE00DFC066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA57195F219B438E00FB1109 /* PillUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillUI.swift; sourceTree = "<group>"; };
 		EA93778C219D0E7F0013594D /* Squircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squircle.swift; sourceTree = "<group>"; };
+		EA95141821CDF1940025CB29 /* UnconfiguredRedditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnconfiguredRedditViewController.swift; sourceTree = "<group>"; };
 		EAC3A169219E0D4800907D4A /* RealTimeSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeSettingsTableViewController.swift; sourceTree = "<group>"; };
 		EADE5305219A22E300271D37 /* RealTimeRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeRefreshController.swift; sourceTree = "<group>"; };
 		EADE5307219A78C400271D37 /* SubredditSuggestionsPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditSuggestionsPopOverViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				EA549DC821597ABC00DFC066 /* RisingStoriesViewController.swift */,
+				EA95141821CDF1940025CB29 /* UnconfiguredRedditViewController.swift */,
 				EADE5307219A78C400271D37 /* SubredditSuggestionsPopOverViewController.swift */,
 				EAC3A169219E0D4800907D4A /* RealTimeSettingsTableViewController.swift */,
 			);
@@ -358,6 +361,7 @@
 			files = (
 				EA571960219B438E00FB1109 /* PillUI.swift in Sources */,
 				EADE5306219A22E300271D37 /* RealTimeRefreshController.swift in Sources */,
+				EA95141921CDF1940025CB29 /* UnconfiguredRedditViewController.swift in Sources */,
 				EA4E22502187A37D00269F54 /* RedditPost.swift in Sources */,
 				EADE530E219A846000271D37 /* SubredditModel.swift in Sources */,
 				EA4E224E2187A0EE00269F54 /* RedditPostDownloadService.swift in Sources */,
