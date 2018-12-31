@@ -5,13 +5,14 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Rising Stories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Rising Stories" id="BYZ-38-t0r" customClass="RisingStoriesViewController" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RisingStoriesView" title="Rising Stories" id="BYZ-38-t0r" customClass="RisingStoriesViewController" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="JwG-RW-ROl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -205,7 +206,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWn-rW-dGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Z55-iX-kXs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2916" y="-421"/>
+            <point key="canvasLocation" x="2916" y="-512"/>
         </scene>
         <!--Subreddits-->
         <scene sceneID="WU2-zY-87i">
@@ -292,6 +293,81 @@
             </objects>
             <point key="canvasLocation" x="2005.7971014492755" y="288.61607142857139"/>
         </scene>
+        <!--Unconfigured Reddit View Controller-->
+        <scene sceneID="rmN-A2-bhU">
+            <objects>
+                <viewController storyboardIdentifier="UnconfiguredView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PCD-lG-xdw" customClass="UnconfiguredRedditViewController" customModule="RedditRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ell-hg-NVw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Pulsr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7m-S3-TEk">
+                                <rect key="frame" x="20" y="133" width="374" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To get started, select a subreddit." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkB-J4-AvT">
+                                <rect key="frame" x="20" y="177" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="c3C-vz-68O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pvj-vK-cav">
+                                <rect key="frame" x="0.0" y="235" width="414" height="661"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubredditCell" textLabel="TDM-p7-Dps" style="IBUITableViewCellStyleDefault" id="w4F-6E-aP9" customClass="SubredditTableViewCell" customModule="RedditRealTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w4F-6E-aP9" id="eaT-xt-sVC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TDM-p7-Dps">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="TDM-p7-Dps" id="kn1-mo-U7e"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pvj-vK-cav" secondAttribute="bottom" id="EiM-XK-03S"/>
+                            <constraint firstItem="lkB-J4-AvT" firstAttribute="top" secondItem="y7m-S3-TEk" secondAttribute="bottom" constant="8" symbolic="YES" id="Ibs-qF-Pko"/>
+                            <constraint firstItem="lkB-J4-AvT" firstAttribute="centerX" secondItem="pvj-vK-cav" secondAttribute="centerX" id="SeO-pU-wrk"/>
+                            <constraint firstItem="pvj-vK-cav" firstAttribute="top" secondItem="lkB-J4-AvT" secondAttribute="bottom" constant="37" id="YIg-9N-taC"/>
+                            <constraint firstItem="y7m-S3-TEk" firstAttribute="leading" secondItem="Ell-hg-NVw" secondAttribute="leadingMargin" id="bEf-Hp-WNt"/>
+                            <constraint firstItem="y7m-S3-TEk" firstAttribute="top" secondItem="H6o-n8-GxM" secondAttribute="top" constant="89" id="crV-hf-8Nb"/>
+                            <constraint firstItem="y7m-S3-TEk" firstAttribute="leading" secondItem="lkB-J4-AvT" secondAttribute="leading" id="nhA-AK-HiH"/>
+                            <constraint firstAttribute="trailing" secondItem="pvj-vK-cav" secondAttribute="trailing" id="pKB-KM-djq"/>
+                            <constraint firstItem="y7m-S3-TEk" firstAttribute="trailing" secondItem="lkB-J4-AvT" secondAttribute="trailing" id="yX0-24-Lat"/>
+                            <constraint firstItem="pvj-vK-cav" firstAttribute="leading" secondItem="Ell-hg-NVw" secondAttribute="leading" id="ygV-SE-gv4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H6o-n8-GxM"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="subredditTableView" destination="pvj-vK-cav" id="pmu-zJ-cKh"/>
+                        <segue destination="yWX-at-b9O" kind="show" identifier="segueToRisingStoriesView" id="n2p-Ds-esf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MbL-eX-fxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="-574.55357142857144"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xoo-8V-LqK">
             <objects>
@@ -308,7 +384,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsO-kb-UhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2006" y="-421"/>
+            <point key="canvasLocation" x="2006" y="-512"/>
         </scene>
     </scenes>
     <resources>
