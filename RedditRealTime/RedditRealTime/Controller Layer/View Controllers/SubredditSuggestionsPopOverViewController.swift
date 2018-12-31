@@ -17,6 +17,7 @@ class ChangeSubredditView: UITableViewController {
     var redditModel = MetaRedditModel()
     
     override func viewDidLoad() {
+        subredditTable.tableFooterView = UIView()
         subredditTable.dataSource = self
         updateUI()
     }
