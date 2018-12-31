@@ -38,7 +38,7 @@ class RisingStoriesViewController: UIViewController, UITableViewDataSource, UITa
     
     private func setUpFirstTimeUI() {
         
-//        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView()
         
         if redditPostFetcher.redditModel.subredditName == "" {
             let unconfiguredView = self.storyboard?.instantiateViewController(withIdentifier: "UnconfiguredView") as! UnconfiguredRedditViewController

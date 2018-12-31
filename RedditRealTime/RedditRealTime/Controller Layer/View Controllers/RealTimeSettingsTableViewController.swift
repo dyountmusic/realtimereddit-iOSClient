@@ -46,7 +46,7 @@ class RealTimeSettingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.tableFooterView = UIView()
         checkForRealTime()
         checkForDeviceSleep()
     }

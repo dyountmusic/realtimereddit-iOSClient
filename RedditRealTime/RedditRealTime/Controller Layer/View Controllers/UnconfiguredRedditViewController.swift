@@ -19,7 +19,7 @@ class UnconfiguredRedditViewController: UIViewController, UITableViewDelegate, U
         subredditTableView.dataSource = self
         subredditTableView.delegate = self
         super.viewDidLoad()
-        
+        subredditTableView.tableFooterView = UIView()
         updateUI()
         
     }
