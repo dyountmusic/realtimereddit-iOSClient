@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWX-at-b9O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWX-at-b9O">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,57 +18,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PCell" id="2hZ-Tc-KQK" customClass="PostTableViewCell" customModule="RedditRealTime" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PCell" textLabel="pWy-CF-bck" style="IBUITableViewCellStyleDefault" id="2hZ-Tc-KQK" customClass="PostTableViewCell" customModule="RedditRealTime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hZ-Tc-KQK" id="ucQ-lM-Hqu">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-PW-sNo">
-                                            <rect key="frame" x="20" y="11" width="374" height="86"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="86" id="DFy-BG-1c4"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTE-OD-1lo" customClass="PillUILabel" customModule="RedditRealTime" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="99" width="83" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="83" id="2Iz-rz-Gai"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="83" id="tDS-jv-jYE"/>
-                                                <constraint firstAttribute="height" constant="30" id="wsz-Eb-Rw7"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLA-sJ-B4F">
-                                            <rect key="frame" x="205" y="104" width="189" height="20"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pWy-CF-bck">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="149.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="rLA-sJ-B4F" secondAttribute="trailing" id="1tE-V7-elZ"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="top" secondItem="ucQ-lM-Hqu" secondAttribute="topMargin" id="AvI-aa-LAp"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="trailing" secondItem="ucQ-lM-Hqu" secondAttribute="trailingMargin" id="CIh-6k-9xw"/>
-                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="centerY" secondItem="rLA-sJ-B4F" secondAttribute="centerY" id="ZaW-y6-JID"/>
-                                        <constraint firstItem="NTE-OD-1lo" firstAttribute="top" secondItem="e8q-PW-sNo" secondAttribute="bottom" constant="2" id="e7c-vZ-AaE"/>
-                                        <constraint firstItem="rLA-sJ-B4F" firstAttribute="top" secondItem="e8q-PW-sNo" secondAttribute="bottom" constant="7" id="l2p-qg-n2a"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="ucQ-lM-Hqu" secondAttribute="leadingMargin" id="tg1-FS-Utm"/>
-                                        <constraint firstItem="e8q-PW-sNo" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="leading" id="ufn-Ec-dYI"/>
-                                        <constraint firstItem="rLA-sJ-B4F" firstAttribute="leading" secondItem="NTE-OD-1lo" secondAttribute="trailing" constant="102" id="xV1-2v-noE"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="comments" destination="rLA-sJ-B4F" id="rzQ-uq-Fep"/>
-                                    <outlet property="title" destination="e8q-PW-sNo" id="OSE-SB-dmt"/>
-                                    <outlet property="upvotes" destination="NTE-OD-1lo" id="kw7-oa-5mW"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
